@@ -8,11 +8,11 @@ public abstract class Shape {
     }
 
     public abstract double getArea();
-    public abstract double getPerimiter();
+    public abstract double getPerimeter();
 
     @Override
     public String toString() {
-        return "Shape: "+ name + ", Area: " +getArea() + ", Perimeter: " + getPerimiter();
+        return "Shape: "+ name + ", Area: " +getArea() + ", Perimeter: " + getPerimeter();
     }
 }
 
