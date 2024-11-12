@@ -1,4 +1,4 @@
-package Question2;
+
 
 public class Point {
     private float x;

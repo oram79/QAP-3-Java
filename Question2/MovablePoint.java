@@ -1,4 +1,4 @@
-package Question2;
+
 
 public class MovablePoint extends Point{
     private float xSpeed;
