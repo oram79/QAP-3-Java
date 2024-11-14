@@ -9,10 +9,15 @@ public class Demo {
         
         // listing all shape before scaling //
 
-        System.out.println("Before scaling:");
+        System.out.println();
+        System.out.println("BEFORE SCALING:");
+        System.out.println();
         System.out.println(circle);
+        System.out.println();
         System.out.println(ellipse);
+        System.out.println();
         System.out.println(triangle);
+        System.out.println();
         System.out.println(equilateralTriangle);
 
         // Scale shapes //
@@ -21,11 +26,18 @@ public class Demo {
         ellipse.scale(1.5);
         triangle.scale(2);
         equilateralTriangle.scale(1.5);
-
-        System.out.println("\nAfter scaling:");
+       
+        System.out.println();
+        System.out.println();
+        System.out.println("AFTER SCALING:");
+        System.out.println();
         System.out.println(circle);
+        System.out.println();
         System.out.println(ellipse);
+        System.out.println();
         System.out.println(triangle);
+        System.out.println();
         System.out.println(equilateralTriangle);
+        System.out.println();
     }
 }
