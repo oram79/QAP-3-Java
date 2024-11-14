@@ -1,6 +1,6 @@
 package Question3;
 
-public class Circle extends Ellipse{
+public class Circle extends Ellipse {
     private double radius;
 
     public Circle(String name, double radius) {
