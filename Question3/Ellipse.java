@@ -4,15 +4,15 @@ public class Ellipse extends Shape {
     private double a;
     private double b;
 
-    public Ellipse(String name, double a, double b) {
+    public Ellipse(String name, double axis1, double axis2) {
         super(name);
-        if (a < b) {
-            double temp = a;
-            a = b;
-            b = temp;
+        if (axis1 > axis2) {
+            this.a = axis1;
+            this.b = axis2;
+        } else {
+            this.a = axis2;
+            this.b = axis1;
         }
-        this.a = a;
-        this.b = b;
     }
     
     @Override
@@ -22,6 +22,6 @@ public class Ellipse extends Shape {
     
     @Override
     public double getPerimeter() {
-        return Math.PI * 2 * (Math.sqrt((a * a * b * b) / 2.0));
+        return Math.PI * 2 * (a * a + b * b) - Math.pow((a - b), 2) / 2;
     }
 }
