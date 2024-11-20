@@ -20,7 +20,7 @@ public class Demo {
         System.out.println();
         System.out.println(equilateralTriangle);
 
-        // Scale shapes //
+        // Scaled shapes //
 
         circle.scale(2);
         ellipse.scale(1.5);

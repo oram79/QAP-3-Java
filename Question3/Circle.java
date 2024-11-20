@@ -20,8 +20,8 @@ public class Circle extends Shape {
 
     @Override
     public String toString() {
-        return super.toString() + ", Radius: " + radius + 
-               ", Perimeter: " + computePerimeter() + 
+        return super.toString() + ", Radius: " + radius +
+               ", Perimeter: " + computePerimeter() +
                ", Area: " + computeArea();
     }
 }
