@@ -1,27 +1,32 @@
 package Question3;
 
 public class Ellipse extends Shape {
-    private double a;
-    private double b;
+    private double majorAxis;
+    private double minorAxis;
 
-    public Ellipse(String name, double axis1, double axis2) {
+    public Ellipse(String name, double majorAxis, double minorAxis) {
         super(name);
-        if (axis1 > axis2) {
-            this.a = axis1;
-            this.b = axis2;
-        } else {
-            this.a = axis2;
-            this.b = axis1;
-        }
+        this.majorAxis = Math.max(majorAxis, minorAxis);
+        this.minorAxis = Math.min(majorAxis, minorAxis);
     }
-    
+
     @Override
-    public double getArea() {
-        return Math.PI * a * b;
+    public double computePerimeter() {
+        
+        return Math.PI * (3 * (majorAxis + minorAxis) -
+               Math.sqrt((3 * majorAxis + minorAxis) * (majorAxis + 3 * minorAxis)));
     }
-    
+
     @Override
-    public double getPerimeter() {
-        return Math.PI * 2 * (a * a + b * b) - Math.pow((a - b), 2) / 2;
+    public double computeArea() {
+        return Math.PI * majorAxis * minorAxis;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Major Axis: " + majorAxis +
+            ", Minor Axis: " + minorAxis +
+            ", Perimeter: " + computePerimeter() +
+            ", Area: " + computeArea();
     }
 }
