@@ -7,7 +7,7 @@ public class Triangle extends Shape {
 
     public Triangle(String name, double side1, double side2, double side3) {
         super(name);
-        if (isVaildTriangle(side1, side2, side3)) {
+        if (isValidTriangle(side1, side2, side3)) {
             this.side1 = side1;
             this.side2 = side2;
             this.side3 = side3;
@@ -16,7 +16,7 @@ public class Triangle extends Shape {
         }
     }
 
-    private boolean isVaildTriangle(double side1, double side2, double side3) {
+    private boolean isValidTriangle(double side1, double side2, double side3) {
         return (side1 + side2 > side3) && (side2 + side3 > side1) && (side3 + side1 > side2);
     }
 
@@ -36,7 +36,7 @@ public class Triangle extends Shape {
         this.side1 *= factor;
         this.side2 *= factor;
         this.side3 *= factor;
-        if (!isVaildTriangle(side1, side2, side3)) {
+        if (!isValidTriangle(side1, side2, side3)) {
             throw new IllegalStateException("Scaling Resulted In An Invalid Triangle");
         }
     }
